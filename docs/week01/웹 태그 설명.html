@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 태그 종합 예제</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .example {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-left: 5px solid #3498db;
+      border-radius: 6px;
+      text-align: left;
+    }
+    .output {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .description {
+      font-size: 14px;
+      color: #555;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    hr {
+      margin: 40px 0;
+    }
+    button.code-toggle {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .code-box {
+      display: none;
+      margin-top: 10px;
+      background: #f9f9f9;
+      border: 1px dashed #ccc;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 HTML 태그 종합 예제</h1>
+
+    <!-- 기존 예제는 유지됨 -->
+     <!-- 텍스트 관련 -->
+    <div class="example"><div class="output"><h1 style="color: blue;">제목 1 (h1)</h1></div><div class="description"><code>&lt;h1&gt;</code> 태그는 문서에서 가장 큰 제목을 나타냅니다.</div></div>
+    <div class="example"><div class="output"><p>단락입니다. 줄바꿈 없이 표시됩니다.</p></div><div class="description"><code>&lt;p&gt;</code>: 문단을 표현하는 태그</div></div>
+    <div class="example"><div class="output">줄 바꾸기<br>여기서 줄이 바뀝니다.</div><div class="description"><code>&lt;br&gt;</code>: 줄 바꿈</div></div>
+    <div class="example"><div class="output"><hr></div><div class="description"><code>&lt;hr&gt;</code>: 수평선 삽입</div></div>
+    <div class="example"><div class="output"><blockquote>인용문입니다.</blockquote></div><div class="description"><code>&lt;blockquote&gt;</code>: 인용문 들여쓰기</div></div>
+    <div class="example"><div class="output"><pre>공백 유지되고 줄바꿈됨</pre></div><div class="description"><code>&lt;pre&gt;</code>: 입력 그대로 출력</div></div>
+    <div class="example"><div class="output"><strong>강조</strong>와 <b>굵게</b></div><div class="description"><code>&lt;strong&gt;</code>: 의미 강조 / <code>&lt;b&gt;</code>: 굵게</div></div>
+    <div class="example"><div class="output"><em>중요</em>와 <i>이탤릭</i></div><div class="description"><code>&lt;em&gt;</code>: 의미 강조 / <code>&lt;i&gt;</code>: 기울임</div></div>
+    <div class="example"><div class="output"><mark>형광펜</mark></div><div class="description"><code>&lt;mark&gt;</code>: 강조</div></div>
+    <div class="example"><div class="output"><span style="color:red;">인라인 스타일 적용</span></div><div class="description"><code>&lt;span&gt;</code>: 부분 스타일 적용</div></div>
+    <div class="example"><div class="output"><code>alert('Hello');</code></div><div class="description"><code>&lt;code&gt;</code>: 코드 표현</div></div>
+    <div class="example"><div class="output"><kbd>Ctrl + S</kbd></div><div class="description"><code>&lt;kbd&gt;</code>: 키보드 입력</div></div>
+    <div class="example"><div class="output">H<sub>2</sub>O / x<sup>2</sup></div><div class="description"><code>&lt;sub&gt;</code>: 아랫첨자 / <code>&lt;sup&gt;</code>: 윗첨자</div></div>
+    <div class="example"><div class="output"><s>취소선</s> / <u>밑줄</u></div><div class="description"><code>&lt;s&gt;</code>: 취소 / <code>&lt;u&gt;</code>: 밑줄</div></div>
+    <div class="example"><div class="output"><abbr title="HyperText Markup Language">HTML</abbr></div><div class="description"><code>&lt;abbr&gt;</code>: 약어 및 툴팁</div></div>
+    <div class="example"><div class="output"><cite>위대한 개츠비</cite></div><div class="description"><code>&lt;cite&gt;</code>: 인용 출처</div></div>
+    <div class="example"><div class="output"><ruby>愛<rt>사랑</rt></ruby></div><div class="description"><code>&lt;ruby&gt;&lt;rt&gt;</code>: 발음 또는 주석 추가</div></div>
+
+
+    <!-- ul li 태그 -->
+    <div class="example">
+      <div class="output">
+        <ul><li>사과</li><li>바나나</li><li>포도</li></ul>
+      </div>
+      <div class="description">
+        <code>&lt;ul&gt;&lt;li&gt;</code>: 순서 없는 목록
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;사과&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;바나나&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;포도&lt;/li&gt;<br>&lt;/ul&gt;</div>
+      </div>
+    </div>
+
+    <!-- Ol li 태그 -->
+    <div class="example">
+      <div class="output">
+        <ol type="A" start="3"><li>첫 번째</li><li>두 번째</li></ol>
+      </div>
+      <div class="description">
+        <code>&lt;ol type="A" start="3"&gt;</code>: 순서 있는 목록 시작 번호 및 유형 설정
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;ol type="A" start="3"&gt;<br>&nbsp;&nbsp;&lt;li&gt;첫 번째&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;두 번째&lt;/li&gt;<br>&lt;/ol&gt;</div>
+      </div>
+    </div>
+
+    <!-- Dl, dt, dd 태그 -->
+    <div class="example">
+      <div class="output">
+        <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+        </dl>
+      </div>
+      <div class="description">
+        <code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code>: 정의형 목록 구조
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;dl&gt;<br>&nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>&nbsp;&nbsp;&lt;dd&gt;HyperText Markup Language&lt;/dd&gt;<br>&lt;/dl&gt;</div>
+      </div>
+    </div>
+
+    <!-- Table 태그 -->
+    <div class="example">
+      <div class="output">
+        <figure>
+          <figcaption>과일 목록</figcaption>
+          <table border="1">
+            <caption>과일표</caption>
+            <tr><th>이름</th><th>색상</th></tr>
+            <tr><td>사과</td><td>빨강</td></tr>
+            <tr><td>바나나</td><td>노랑</td></tr>
+          </table>
+        </figure>
+      </div>
+      <div class="description">
+        <code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;&lt;td&gt;&lt;caption&gt;</code>: 표 작성 요소
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;table border="1"&gt;<br>&nbsp;&nbsp;&lt;caption&gt;과일표&lt;/caption&gt;<br>&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;이름&lt;/th&gt;&lt;th&gt;색상&lt;/th&gt;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;사과&lt;/td&gt;&lt;td&gt;빨강&lt;/td&gt;&lt;/tr&gt;<br>&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;바나나&lt;/td&gt;&lt;td&gt;노랑&lt;/td&gt;&lt;/tr&gt;<br>&lt;/table&gt;</div>
+      </div>
+    </div>
+
+    <!-- 9. 인풋 선택 섹션 연결 (전체 확장) -->
+    <div class="example">
+      <div class="output">
+        <label for="inputType">Input Type 선택:</label>
+        <select id="inputType" onchange="showInputExample(this.value)">
+          <option value="hidden">hidden</option>
+          <option value="text">text</option>
+          <option value="search">search</option>
+          <option value="tel">tel</option>
+          <option value="url">url</option>
+          <option value="email">email</option>
+          <option value="password">password</option>
+          <option value="datetime">datetime</option>
+          <option value="datetime-local">datetime-local</option>
+          <option value="date">date</option>
+          <option value="month">month</option>
+          <option value="week">week</option>
+          <option value="time">time</option>
+          <option value="number">number</option>
+          <option value="range">range</option>
+          <option value="color">color</option>
+          <option value="checkbox">checkbox</option>
+          <option value="radio">radio</option>
+          <option value="file">file</option>
+          <option value="submit">submit</option>
+          <option value="image">image</option>
+          <option value="reset">reset</option>
+          <option value="button">button</option>
+        </select>
+        <div id="inputExample"></div>
+      </div>
+      <div class="description">
+        다양한 <code>&lt;input type="..."&gt;</code>을 선택해 예제를 확인할 수 있습니다.
+      </div>
+    </div>
+
+    <!-- 10. label + radio -->
+    <div class="example">
+      <div class="output">
+        <label><input type="radio" name="gender" value="male"> 남성</label>
+        <label><input type="radio" name="gender" value="female"> 여성</label>
+      </div>
+      <div class="description">
+        <code>&lt;label&gt;&lt;input type="radio"&gt;</code>: 라디오 버튼과 라벨 연결
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;label&gt;&lt;input type="radio" name="gender" value="male"&gt; 남성&lt;/label&gt;<br>&lt;label&gt;&lt;input type="radio" name="gender" value="female"&gt; 여성&lt;/label&gt;</div>
+      </div>
+    </div>
+
+    <!-- 11. select + option + optgroup -->
+    <div class="example">
+      <div class="output">
+        <select>
+          <optgroup label="프론트엔드">
+            <option>HTML</option>
+            <option>CSS</option>
+          </optgroup>
+          <optgroup label="백엔드">
+            <option>Java</option>
+            <option>Python</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="description">
+        <code>&lt;select&gt;&lt;option&gt;&lt;optgroup&gt;</code>: 그룹화된 선택 목록
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;select&gt;<br>&nbsp;&nbsp;&lt;optgroup label="프론트엔드"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br>&nbsp;&nbsp;&lt;/optgroup&gt;<br>&nbsp;&nbsp;&lt;optgroup label="백엔드"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Java&lt;/option&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Python&lt;/option&gt;<br>&nbsp;&nbsp;&lt;/optgroup&gt;<br>&lt;/select&gt;</div>
+      </div>
+    </div>
+
+    <!-- 12. datalist + option -->
+    <div class="example">
+      <div class="output">
+        <input list="browsers" placeholder="브라우저를 선택하세요">
+        <datalist id="browsers">
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Safari">
+        </datalist>
+      </div>
+      <div class="description">
+        <code>&lt;datalist&gt;&lt;option&gt;</code>: 자동 완성 목록 연결
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;input list="browsers" placeholder="브라우저를 선택하세요"&gt;<br>&lt;datalist id="browsers"&gt;<br>&nbsp;&nbsp;&lt;option value="Chrome"&gt;<br>&nbsp;&nbsp;&lt;option value="Firefox"&gt;<br>&nbsp;&nbsp;&lt;option value="Safari"&gt;<br>&lt;/datalist&gt;</div>
+      </div>
+    </div>
+
+    <!-- 13. textarea -->
+    <div class="example">
+      <div class="output">
+        <textarea rows="4" cols="30" placeholder="의견을 입력하세요"></textarea>
+      </div>
+      <div class="description">
+        <code>&lt;textarea rows="4" cols="30"&gt;</code>: 여러 줄 텍스트 입력
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;textarea rows="4" cols="30" placeholder="의견을 입력하세요"&gt;&lt;/textarea&gt;</div>
+      </div>
+    </div>
+
+    <!-- 14. output -->
+    <div class="example">
+      <div class="output">
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+          <input type="range" id="a" value="50"> + <input type="number" id="b" value="50"> =
+          <output name="result">100</output>
+        </form>
+      </div>
+      <div class="description">
+        <code>&lt;output&gt;</code>: 계산 결과 표시용 출력 요소
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;<br>&nbsp;&nbsp;&lt;input type="range" id="a" value="50"&gt; + <br>&nbsp;&nbsp;&lt;input type="number" id="b" value="50"&gt; =<br>&nbsp;&nbsp;&lt;output name="result"&gt;100&lt;/output&gt;<br>&lt;/form&gt;</div>
+      </div>
+    </div>
+
+    <!-- 15. progress -->
+    <div class="example">
+      <div class="output">
+        <progress value="70" max="100"></progress>
+      </div>
+      <div class="description">
+        <code>&lt;progress value="70" max="100"&gt;</code>: 진행 상태 표시
+        <br><button class="code-toggle" onclick="toggleCode(this)">코드 보기</button>
+        <div class="code-box">&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</div>
+      </div>
+    </div>
+
+    <hr>
+    <p style="color: gray;">모든 예제는 HTML5 표준에 따라 작성되었습니다.</p>
+  </div>
+
+  <script>
+    function toggleCode(button) {
+      const box = button.nextElementSibling;
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showInputExample(type) {
+      const area = document.getElementById("inputExample");
+      const inputs = {
+        hidden: '<input type="hidden" name="username" value="otter"> (숨겨진 값)',
+        text: '<input type="text" placeholder="텍스트 입력">',
+        search: '<input type="search" placeholder="검색어 입력">',
+        tel: '<input type="tel" placeholder="010-1234-5678">',
+        url: '<input type="url" placeholder="https://example.com">',
+        email: '<input type="email" placeholder="example@email.com">',
+        password: '<input type="password" placeholder="비밀번호">',
+        datetime: '<input type="datetime" value="2025-04-13T18:00">',
+        "datetime-local": '<input type="datetime-local" value="2025-04-13T18:00">',
+        date: '<input type="date" value="2025-04-13">',
+        month: '<input type="month" value="2025-04">',
+        week: '<input type="week" value="2025-W15">',
+        time: '<input type="time" value="12:30">',
+        number: '<input type="number" min="1" max="10" value="5">',
+        range: '<input type="range" min="0" max="100" value="50">',
+        color: '<input type="color" value="#ff0000">',
+        checkbox: '<label><input type="checkbox" checked> 동의</label>',
+        radio: '<label><input type="radio" name="gender" checked> 선택</label>',
+        file: '<input type="file">',
+        submit: '<input type="submit" value="제출">',
+        image: '<input type="image" src="https://via.placeholder.com/50" alt="제출">',
+        reset: '<input type="reset" value="초기화">',
+        button: '<input type="button" value="버튼" onclick="alert(\'눌림!\')">'
+      };
+      area.innerHTML = inputs[type] || '';
+    }
+  </script>
+</body>
+</html>
